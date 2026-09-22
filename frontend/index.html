@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Study Mate — Your Intelligent AI Study Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/assistant.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">✎</span>
+        <span class="brand-name">Study Mate</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+        <button class="nav-cta" data-open-chat type="button">Try AI Assistant</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">✨ Powered by Google Gemini</p>
+          <h1>Your <span class="gradient-text">Intelligent AI</span> Study Companion</h1>
+          <p class="hero-sub">
+            Study Mate explains concepts, breaks down tough problems, summarizes
+            topics, and checks your understanding — through a real conversation
+            with a generative AI model, available whenever you need it.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" data-open-chat type="button">Try AI Assistant</button>
+            <a href="#how-it-works" class="btn btn-ghost btn-lg">See how it works</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glass-card">
+            <svg class="hero-illustration" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroSvgTitle">
+              <title id="heroSvgTitle">Illustration of an AI neural network powering an open book, representing AI-assisted learning</title>
+              <defs>
+                <linearGradient id="gradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4F6EF7"/>
+                  <stop offset="55%" stop-color="#8B5CF6"/>
+                  <stop offset="100%" stop-color="#A78BFA"/>
+                </linearGradient>
+                <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22D3EE"/>
+                  <stop offset="100%" stop-color="#F472B6"/>
+                </linearGradient>
+              </defs>
+
+              <g stroke="url(#gradPrimary)" stroke-width="1.4" opacity="0.55">
+                <line x1="200" y1="70" x2="140" y2="120"/>
+                <line x1="200" y1="70" x2="260" y2="120"/>
+                <line x1="200" y1="70" x2="200" y2="130"/>
+                <line x1="140" y1="120" x2="110" y2="170"/>
+                <line x1="140" y1="120" x2="200" y2="130"/>
+                <line x1="260" y1="120" x2="290" y2="170"/>
+                <line x1="260" y1="120" x2="200" y2="130"/>
+                <line x1="110" y1="170" x2="200" y2="130"/>
+                <line x1="290" y1="170" x2="200" y2="130"/>
+              </g>
+
+              <circle cx="200" cy="70" r="10" fill="url(#gradPrimary)"/>
+              <circle cx="140" cy="120" r="7" fill="url(#gradPrimary)"/>
+              <circle cx="260" cy="120" r="7" fill="url(#gradPrimary)"/>
+              <circle cx="200" cy="130" r="8" fill="url(#gradAccent)"/>
+              <circle cx="110" cy="170" r="6" fill="url(#gradAccent)"/>
+              <circle cx="290" cy="170" r="6" fill="url(#gradAccent)"/>
+
+              <g transform="translate(200 40)">
+                <polygon points="0,-14 34,0 0,14 -34,0" fill="#1E1B3A"/>
+                <rect x="-6" y="0" width="12" height="16" rx="2" fill="#1E1B3A"/>
+                <circle cx="0" cy="16" r="3" fill="url(#gradAccent)"/>
+              </g>
+
+              <g transform="translate(200 210)">
+                <path d="M -130 40 C -90 15 -40 15 0 30 C 40 15 90 15 130 40 L 130 90 C 90 70 40 70 0 85 C -40 70 -90 70 -130 90 Z" fill="#FFFFFF" stroke="url(#gradPrimary)" stroke-width="2.5"/>
+                <line x1="0" y1="30" x2="0" y2="85" stroke="url(#gradPrimary)" stroke-width="2"/>
+                <path d="M -100 45 C -75 35 -45 35 -20 45" stroke="#D8D4F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M -100 58 C -75 48 -45 48 -20 58" stroke="#D8D4F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M 20 45 C 45 35 75 35 100 45" stroke="#D8D4F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M 20 58 C 45 48 75 48 100 58" stroke="#D8D4F5" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </g>
+
+              <g fill="url(#gradAccent)">
+                <circle cx="60" cy="90" r="3"/>
+                <circle cx="340" cy="100" r="4"/>
+                <circle cx="330" cy="230" r="3"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="how">
+      <div class="wrap">
+        <h2>From question to understanding, in three steps</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-index">1</span>
+            <h3>Open the assistant</h3>
+            <p>Click the floating AI button or "Try AI Assistant" — no sign-up, no setup on your end.</p>
+          </li>
+          <li>
+            <span class="step-index">2</span>
+            <h3>Ask anything</h3>
+            <p>Type a question about any subject, in your own words.</p>
+          </li>
+          <li>
+            <span class="step-index">3</span>
+            <h3>Get a real answer</h3>
+            <p>Study Mate generates a fresh, thought-through response — every time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+      <div class="wrap">
+        <h2>Built for the way studying actually feels</h2>
+        <div class="card-row">
+          <article class="index-card">
+            <span class="feature-icon icon-a" aria-hidden="true">💡</span>
+            <h3>Explains, doesn't just answer</h3>
+            <p>Ask "why," not just "what." Study Mate walks through reasoning step by step, the way a good tutor would.</p>
+          </article>
+          <article class="index-card">
+            <span class="feature-icon icon-b" aria-hidden="true">💬</span>
+            <h3>Remembers the conversation</h3>
+            <p>Follow-up questions stay in context, and every past conversation is saved so you can pick up where you left off.</p>
+          </article>
+          <article class="index-card">
+            <span class="feature-icon icon-c" aria-hidden="true">📚</span>
+            <h3>Any subject, any time</h3>
+            <p>Math proofs at midnight, essay structure at noon, chemistry the night before an exam — it's ready.</p>
+          </article>
+          <article class="index-card">
+            <span class="feature-icon icon-d" aria-hidden="true">✦</span>
+            <h3>Genuinely generative</h3>
+            <p>Every response is produced live by Google's Gemini model — never a pre-written script.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <h2>Ready when your next question is.</h2>
+        <button class="btn btn-primary btn-lg" data-open-chat type="button">Try AI Assistant</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>Study Mate — a student portfolio project. Runs entirely on your own machine.</span>
+      <span class="footer-model">Powered by Google Gemini</span>
+    </div>
+  </footer>
+
+  <!-- ============================= AI ASSISTANT WIDGET ============================= -->
+  <div id="assistant-widget" class="assistant-widget mode-popup">
+
+    <button id="fab-chat" class="fab-chat" type="button" aria-label="Open Study Mate AI assistant" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v9c0 .83-.67 1.5-1.5 1.5H9l-4 4v-4H5.5C4.67 15 4 14.33 4 13.5v-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <circle cx="9" cy="9.5" r="1" fill="currentColor"/>
+        <circle cx="12" cy="9.5" r="1" fill="currentColor"/>
+        <circle cx="15" cy="9.5" r="1" fill="currentColor"/>
+      </svg>
+    </button>
+
+    <div id="assistant-popup" class="assistant-popup" role="dialog" aria-label="Study Mate AI assistant" aria-hidden="true">
+      <div class="assistant-card">
+
+        <header class="assistant-header">
+          <div class="assistant-header-left">
+            <button id="history-toggle" class="icon-btn" type="button" aria-label="Toggle chat history">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="assistant-title">
+              <span class="assistant-emoji" aria-hidden="true">🤖</span>
+              <div>
+                <p class="assistant-name">Study Mate</p>
+                <p class="assistant-subtitle">AI Study Assistant</p>
+              </div>
+            </div>
+          </div>
+          <div class="assistant-header-actions">
+            <span id="model-badge" class="model-badge">connecting…</span>
+            <button id="new-chat-btn" class="btn btn-ghost btn-sm" type="button">+ New Chat</button>
+            <button id="close-chat-btn" class="icon-btn" type="button" aria-label="Close chat">&times;</button>
+          </div>
+        </header>
+
+        <div class="assistant-body">
+          <aside id="history-drawer" class="history-drawer">
+            <div class="history-drawer-header">
+              <span>Conversations</span>
+              <button class="icon-btn close-drawer-btn" id="history-close-btn" type="button" aria-label="Close history panel">&times;</button>
+            </div>
+            <div id="history-list" class="history-list"></div>
+          </aside>
+
+          <div class="assistant-main">
+            <div id="popup-messages" class="messages" aria-live="polite"></div>
+
+            <form id="popup-chat-form" class="composer" autocomplete="off">
+              <textarea
+                id="popup-chat-input"
+                class="composer-input"
+                placeholder="Ask a question about anything you're studying…"
+                rows="1"
+                maxlength="4000"
+              ></textarea>
+              <button id="popup-send-btn" class="btn btn-primary composer-send" type="submit">Send</button>
+            </form>
+            <p class="composer-hint">Press Enter to send · Shift + Enter for a new line</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/widget.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new StudyMateAssistant({
+        messagesEl: document.getElementById("popup-messages"),
+        formEl: document.getElementById("popup-chat-form"),
+        inputEl: document.getElementById("popup-chat-input"),
+        sendBtn: document.getElementById("popup-send-btn"),
+        newChatBtn: document.getElementById("new-chat-btn"),
+        historyListEl: document.getElementById("history-list"),
+        modelBadgeEl: document.getElementById("model-badge"),
+        historyToggleBtn: document.getElementById("history-toggle"),
+        historyDrawerEl: document.getElementById("history-drawer"),
+        historyCloseBtn: document.getElementById("history-close-btn"),
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Study Mate — Chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/assistant.css" />
+<style>
+  /* Page-mode specific layout: the assistant fills the whole viewport */
+  html, body { height: 100%; }
+  body.page-chat-body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    overflow: hidden;
+  }
+  .page-topbar {
+    flex-shrink: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .assistant-widget.mode-page {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    padding: 20px;
+  }
+  .assistant-widget.mode-page .assistant-card {
+    width: 100%;
+    height: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body class="page-chat-body">
+
+  <div class="page-topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">✎</span>
+      <span class="brand-name">Study Mate</span>
+    </a>
+  </div>
+
+  <div id="assistant-widget" class="assistant-widget mode-page">
+    <div class="assistant-card">
+
+      <header class="assistant-header">
+        <div class="assistant-header-left">
+          <div class="assistant-title">
+            <span class="assistant-emoji" aria-hidden="true">🤖</span>
+            <div>
+              <p class="assistant-name">Study Mate</p>
+              <p class="assistant-subtitle">AI Study Assistant</p>
+            </div>
+          </div>
+        </div>
+        <div class="assistant-header-actions">
+          <span id="model-badge" class="model-badge">connecting…</span>
+          <button id="new-chat-btn" class="btn btn-ghost btn-sm" type="button">+ New Chat</button>
+          <a href="/" class="icon-btn" aria-label="Close and return home">&times;</a>
+        </div>
+      </header>
+
+      <div class="assistant-body">
+        <aside id="history-drawer" class="history-drawer open">
+          <div class="history-drawer-header">
+            <span>Conversations</span>
+          </div>
+          <div id="history-list" class="history-list"></div>
+        </aside>
+
+        <div class="assistant-main">
+          <div id="messages" class="messages" aria-live="polite"></div>
+
+          <form id="chat-form" class="composer" autocomplete="off">
+            <textarea
+              id="chat-input"
+              class="composer-input"
+              placeholder="Ask a question about anything you're studying…"
+              rows="1"
+              maxlength="4000"
+            ></textarea>
+            <button id="send-btn" class="btn btn-primary composer-send" type="submit">Send</button>
+          </form>
+          <p class="composer-hint">Press Enter to send · Shift + Enter for a new line</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script>
+    // If the chatbot is hosted on Streamlit (deployed setup), this page
+    // just forwards there instead of using the local Flask-backed chat.
+    if (window.STUDYMATE_STREAMLIT_URL) {
+      window.location.replace(window.STUDYMATE_STREAMLIT_URL);
+    }
+  </script>
+  <script src="js/assistant.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new StudyMateAssistant({
+        messagesEl: document.getElementById("messages"),
+        formEl: document.getElementById("chat-form"),
+        inputEl: document.getElementById("chat-input"),
+        sendBtn: document.getElementById("send-btn"),
+        newChatBtn: document.getElementById("new-chat-btn"),
+        historyListEl: document.getElementById("history-list"),
+        modelBadgeEl: document.getElementById("model-badge"),
+      });
+    });
+  </script>
+
+</body>
+</html>
