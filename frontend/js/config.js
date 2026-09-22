@@ -24,4 +24,4 @@
  * These are just URLs, not secrets — safe to commit.
  */
 window.STUDYMATE_API_BASE = "";
-window.STUDYMATE_STREAMLIT_URL = "";
+window.STUDYMATE_STREAMLIT_URL ="https://study-mate-chatbot-8tfjfrxpsawnipdqjq475b.streamlit.app/?embed=true";";
